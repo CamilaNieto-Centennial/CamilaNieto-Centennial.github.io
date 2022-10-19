@@ -1,0 +1,38 @@
+.container {
+    max-width: 960px;
+}
+
+/* Navbar */
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+/* Navbar links (normal) */
+.site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+}
+
+/* Navbar links (hover) */
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#myName {
+    font-family: 'Damion', cursive;
+    font-size: 5em;
+}
+
+.fw-normal {
+    color: #fff;
+}
+
+
+@media (min-width: 768px) {
+    /*.flex-md-equal > * {
+      flex: 1;
+    }*/
+  }
