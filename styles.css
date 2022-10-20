@@ -4,7 +4,7 @@ html, body {
     height: 100%;
 }
 
-.container {
+#containerNavbar {
     max-width: 960px;
 }
 
@@ -50,13 +50,13 @@ html, body {
 /* My Name inside Main Div */
 #myName {
     font-family: 'Damion', cursive;
-    font-size: 8em;
+    font-size: 7.8em;
 }
 
 /* Text inside Main Div */
 .fw-normal {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
 }
 
@@ -73,12 +73,12 @@ html, body {
     ID/Class should've been used. 
     For a small demo 
     it's okaish for now */
-animation: showup 7s 2; /*infinite*/
+animation: showup 5s 4; /*infinite*/
 }
 
 /* Animation on Subtitle inside Main Div */
 .textAnimation:last-of-type {
-    animation: showup 7s 2;
+    animation: showup 5s 4;
 }
 
 /* Showup rules */
@@ -90,6 +90,37 @@ animation: showup 7s 2; /*infinite*/
 }
 
 
+/* About Me Section */
+#about {
+    margin: 2em auto 2em;
+    text-align: center;
+}
+
+
+/* YouTube Video(s) */
+.ratio {
+    margin: auto;
+    text-align: center;
+}
+
+/* Titles of each Section */
+.subtitles {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: .6em;
+}
+
+/* Content of each Section */
+.contents {
+    font-size: 1.15em;
+    text-align: justify;
+}
+
+/* Div of the Content of each Section*/
+.subContents {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
 
 
 #blackText {
@@ -97,8 +128,128 @@ animation: showup 7s 2; /*infinite*/
 }
 
 
-@media (min-width: 768px) {
-    /*.flex-md-equal > * {
-      flex: 1;
-    }*/
+
+
+/*---Media Queries --*/
+
+@media (max-width: 1200px) {
+    /* About Me Section */
+    #about {
+        margin: 1.5em auto 1.5em;
+        text-align: center;
+    }
+
+    /* Titles of each Section */
+    .subtitles {
+        font-size: 3em;
+        margin-bottom: .5em;
+    }
+
+    /* My Name inside Main Div */
+    #myName {
+        font-size: 6em;
+    }
+
+    /* Text inside Main Div */
+    .fw-normal {
+        font-size: 1.48em;
+    }
+
+    
   }
+
+
+    @media (max-width: 992px) {
+    /* About Me Section */
+    #about {
+        margin: 1.2em auto 1.2em;
+        text-align: center;
+    }
+
+    /* Titles of each Section */
+    .subtitles {
+        font-size: 2.6em;
+        margin-bottom: .4em;
+    }
+
+    /* Content of each Section */
+    .contents {
+        font-size: 1.1em;
+    }
+
+    /* My Name inside Main Div */
+    #myName {
+        font-size: 5.7em;
+    }
+    
+    /* Text inside Main Div */
+    .fw-normal {
+        font-size: 1.35em;
+    }
+
+  }
+
+
+@media (max-width: 768px) {
+    /* About Me Section */
+    #about {
+        padding: 1.2em;
+        margin: auto;
+    }
+
+    /* Titles of each Section */
+    .subtitles {
+        font-size: 2.2em;
+        margin-bottom: .4em;
+    }
+
+    /* Content of each Section */
+    .contents {
+        font-size: 1em;
+    }
+
+    /* My Name inside Main Div */
+    #myName {
+        font-size: 4.4em;
+    }
+        
+    /* Text inside Main Div */
+    .fw-normal {
+        font-size: 1.1em;
+    }
+
+      
+    }
+
+
+@media (max-width: 576px) {
+    /* About Me Section */
+    #about {
+        margin: 0em;
+        padding: 1.4em;
+    }
+
+    /* Div of the Content of each Section*/
+    .subContents {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    /* Titles of each Section */
+    .subtitles {
+        font-size: 2.3em;
+        margin-bottom: .4em;
+    }
+
+    /* My Name inside Main Div */
+    #myName {
+        font-size: 4.1em;
+    }
+        
+    /* Text inside Main Div */
+    .fw-normal {
+        font-size: 1.2em;
+    }
+     
+    }
+
