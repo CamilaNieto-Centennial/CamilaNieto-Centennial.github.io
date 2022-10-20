@@ -1,3 +1,9 @@
+html, body {
+    background-color: #ffffff;
+    margin: 0px;
+    height: 100%;
+}
+
 .container {
     max-width: 960px;
 }
@@ -5,14 +11,21 @@
 /* Navbar */
 .site-header {
     background-color: rgba(0, 0, 0, .85);
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
   }
 
 /* Navbar links (normal) */
 .site-header a {
+    display: block;
     color: #8e8e8e;
     transition: color .15s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Navbar links (hover) */
@@ -21,13 +34,33 @@
     text-decoration: none;
 }
 
-#myName {
-    font-family: 'Damion', cursive;
-    font-size: 5em;
+/* Main Div */
+#mainDiv {
+    height: 100vh;
 }
 
+#centerDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* My Name inside Main Div */
+#myName {
+    font-family: 'Damion', cursive;
+    font-size: 8em;
+}
+
+/* Text inside Main Div */
 .fw-normal {
     color: #fff;
+    font-size: 1.5em;
+}
+
+#blackText {
+    color: black;
 }
 
 
