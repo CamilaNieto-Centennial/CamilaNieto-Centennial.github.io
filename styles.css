@@ -57,7 +57,40 @@ html, body {
 .fw-normal {
     color: #fff;
     font-size: 1.5em;
+    text-align: center;
 }
+
+/* Animation on Text inside Main Div */
+/*.textAnimation {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}*/
+
+/* Animation on Title inside Main Div */
+.textAnimation:first-of-type {    
+    /* For increasing performance 
+    ID/Class should've been used. 
+    For a small demo 
+    it's okaish for now */
+animation: showup 7s 2; /*infinite*/
+}
+
+/* Animation on Subtitle inside Main Div */
+.textAnimation:last-of-type {
+    animation: showup 7s 2;
+}
+
+/* Showup rules */
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+
+
 
 #blackText {
     color: black;
