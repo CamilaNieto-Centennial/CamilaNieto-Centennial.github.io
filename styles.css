@@ -4,6 +4,11 @@ html, body {
     height: 100%;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 #containerNavbar {
     max-width: 960px;
 }
@@ -90,8 +95,8 @@ animation: showup 4s 5; /*infinite*/
 }
 
 
-/* About Me Section */
-#about {
+/* divSections (About, Technologies, ...) */
+#divSection {
     margin: 2em auto 2em;
     text-align: center;
 }
@@ -108,6 +113,7 @@ animation: showup 4s 5; /*infinite*/
     font-family: 'Montserrat', sans-serif;
     font-size: 3.2em;
     margin-bottom: .6em;
+    font-weight: bold;
 }
 
 /* Content of each Section */
@@ -123,7 +129,7 @@ animation: showup 4s 5; /*infinite*/
 }
 
 
-/* Quote (give it a background image)*/
+/* QUOTE (give it a background image)*/
 #quote {
     background-color: transparent;
     background-size: cover;
@@ -167,6 +173,104 @@ animation: showup 4s 5; /*infinite*/
 }
 
 
+/* items of each TECHNOLOGIES Section */
+.items {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+
+/* GRID LAYOUT (Applied on Technologies Section) ⏬ */
+
+/* Languages, dbs, and frameworks Grids */
+.languages, .dbs, .frameworks {
+    padding: .6rem .4rem;
+    text-align: center;
+    /*border: 3px inset darkblue;*/ /*inset*/
+    font-size: 1em;
+    aspect-ratio: 1/1.42;
+}
+
+/* Container for Grid with 5 columns */
+.gridContainerPrimary{
+    margin: 0em 6.5em; 
+}
+
+/* Container for Grid with 4 columns */
+.gridContainerSecondary {
+    margin: 0em 10em;
+}
+
+
+/* Languages Grid */
+.gridOne {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5em;
+    /*text-align: center;*/
+}
+
+/* dbs Grid */
+.gridTwo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5em;
+}
+
+/* Frameworks Grid */
+.gridThree {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5em;
+}
+
+/* Testing card contents */
+/*#l3, #l2, #d2, #d3, 
+#l1, #l4, #l5, d1, #d2, #d3, #d4,
+#f1, #f2, #f3, #f4 {
+    background-color: black;
+}*/
+
+
+.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/* Images inside Grids */
+.gridImages {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    /*height: 145px;*/
+    object-fit: contain;/*contain*/
+    margin-bottom: .5em;
+}
+
+/* Content of each card (inside of the content, lives the title) */
+.card_content {
+    z-index: 10;
+    background: white;
+    align-self: end;
+    margin: .5rem .5rem .3rem;
+    padding: .5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+/* Titles of each Card inside the Grids */
+.card_title {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.25;
+}
+
 
 #blackText {
     color: black;
@@ -175,11 +279,11 @@ animation: showup 4s 5; /*infinite*/
 
 
 
-/*---Media Queries --*/
+/*--- MEDIA QUERIES --*/
 
 @media (max-width: 1200px) {
-    /* About Me Section */
-    #about {
+    /* Div of the Content of each Section*/
+    #divSection {
         margin: 1.5em auto 1.5em;
         text-align: center;
     }
@@ -199,12 +303,30 @@ animation: showup 4s 5; /*infinite*/
     .fw-normal {
         font-size: 1.48em;
     }
+
+    /* items of each Technologies Section */
+    .items {
+        font-size: 1.4em;
+        margin-bottom: .6em;
+    }
+    
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 3em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 6em;
+    }
+        
+
 }
 
 
 @media (max-width: 992px) {
-    /* About Me Section */
-    #about {
+    /* Div of the Content of each Section*/
+    #divSection {
         margin: 1.2em auto 1.2em;
         text-align: center;
     }
@@ -239,12 +361,31 @@ animation: showup 4s 5; /*infinite*/
     #quoteTitle {
         font-size: 1.25em;
     }
+
+    /* items of each Technologies Section */
+    .items {
+        font-size: 1.3em;
+        margin-bottom: .5em;
+    }
+
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 1.5em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 2em;
+    }
+       
+
+
 }
 
 
 @media (max-width: 768px) {
-    /* About Me Section */
-    #about {
+    /* Div of the Content of each Section*/
+    #divSection {
         padding: 1.2em;
         margin: auto;
     }
@@ -279,12 +420,30 @@ animation: showup 4s 5; /*infinite*/
     #quoteTitle {
         font-size: 1.1em;
     }    
+
+    /* items of each Technologies Section */
+    .items {
+        font-size: 1.25em;
+        margin-bottom: .45em;
+    }
+
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 0em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em .5em;
+    }
+      
+
 }
 
 
 @media (max-width: 576px) {
-    /* About Me Section */
-    #about {
+    /* Div of the Content of each Section*/
+    #divSection {
         margin: 0em;
         padding: 1.4em;
     }
@@ -320,5 +479,18 @@ animation: showup 4s 5; /*infinite*/
     #quoteTitle {
         font-size: 1em;
     }  
+
+    /* items of each Technologies Section */
+    .items {
+        font-size: 1.2em;
+        margin-bottom: .4em;
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 0em;
+    }
+      
+
 }
 

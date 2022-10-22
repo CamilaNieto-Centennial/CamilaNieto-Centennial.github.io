@@ -12,8 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--<link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Damion&family=Fredoka+One&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Damion&family=Fredoka+One&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap"
+        rel="stylesheet">
 
     <title>My Portfolio</title>
 
@@ -55,7 +59,7 @@
             </a>
             <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
             <a class="py-2 d-none d-md-inline-block" href="#aboutMe">About</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Technologies</a>
+            <a class="py-2 d-none d-md-inline-block" href="#technologies">Technologies</a>
             <a class="py-2 d-none d-md-inline-block" href="#">Projects</a>
             <a class="py-2 d-none d-md-inline-block" href="#">Contact</a>
         </nav>
@@ -78,7 +82,7 @@
 
         <span id="aboutMe"></span>
 
-        <div class="container text-center" id="about">
+        <div class="container text-center" id="divSection">
             <div class="row align-items-center">
                 <div class="col-12">
                     <h2 class="subtitles">About me</h2>
@@ -111,15 +115,149 @@
         </div>
 
 
+
         <div class="position-relative overflow-hidden p-5 p-md-5 text-center" id="quote">
             <!--relative-->
             <div class="col-md-7 p-lg-5 mx-auto my-4">
-                <h3 class="display-4 fw-normal" id="quoteContent"><q>Live the life, accept the challenge. Do not lose the laugh, keep on feeling. Keep your guard and live your dreams</q></h3>
+                <h3 class="display-4 fw-normal" id="quoteContent"><q>Live the life, accept the challenge. Do not lose
+                        the laugh, keep on feeling. Keep your guard and live your dreams</q></h3>
                 <p class="lead fw-normal" id="quoteTitle">~ Carpe Diem</p>
                 <div class="color-overlay"></div>
                 <!--<a class="btn btn-outline-secondary" href="#">Coming soon</a>-->
             </div>
         </div>
+
+
+
+        <span id="technologies"></span>
+
+        <div class="container text-center" id="divSection">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h2 class="subtitles">Technologies</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 subContents">
+                    <!--.container-->
+                    <p class="contents">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, odio nihil atque maxime hic
+                        qui eaque mollitia deleniti molestiae fugiat quisquam in doloremque officiis veritatis officia
+                        accusantium placeat blanditiis error!
+                    </p>
+                    <h4 class="items">Programming, Markup, and Styling Languages</h4>
+                    <div class="gridContainerPrimary">
+                        <div class="gridOne">
+                            <!--5-->
+                            <!--.product-grid-->
+                            <div class="languages stacked" id="l1">
+                                <!--.card-->
+                                <img src="./images/C.png" alt="C" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">C</h5>
+                                    <!--Inside of .card_content is .card_title-->
+                                </div>
+                            </div>
+                            <div class="languages stacked" id="l2">
+                                <img src="./images/Python.png" alt="Python" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Python</h5>
+                                </div>
+                            </div>
+                            <div class="languages stacked" id="l3">
+                                <img src="./images/html-css-javascript.png" alt="HTML, CSS, JavaScript"
+                                    class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">HTML, CSS, JavaScript</h5>
+                                </div>
+                            </div>
+                            <div class="languages stacked" id="l4">
+                                <img src="./images/C_Sharp.png" alt="C#" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">C#</h5>
+                                </div>
+                            </div>
+                            <div class="languages stacked" id="l5">
+                                <img src="./images/Java.png" alt="Java" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Java</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h4 class="items">Databases</h4>
+                    <div class="gridContainerSecondary">
+                        <div class="gridTwo">
+                            <!--4-->
+                            <div class="dbs stacked" id="d1">
+                                <img src="./images/PostgreSQL3.png" alt="C" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">PostgreSQL</h5>
+                                </div>
+                            </div>
+                            <div class="dbs stacked" id="d2">
+                                <img src="./images/MySQL.png" alt="C" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">MySQL</h5>
+                                </div>
+                            </div>
+                            <div class="dbs stacked" id="d3">
+                                <img src="./images/MongoDB.png" alt="C" class="gridImages">
+                                <!--style="width: 180px;"-->
+                                <div class="card_content">
+                                    <h5 class="card_title">MongoDB</h5>
+                                </div>
+                            </div>
+                            <div class="dbs stacked" id="d4">
+                                <img src="./images/ORACLE.png" alt="C" class="gridImages">
+                                <!--style="width: 180px;"-->
+                                <div class="card_content">
+                                    <h5 class="card_title">ORACLE</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <h4 class="items">Frameworks</h4>
+                    <div class="gridContainerSecondary">
+                        <div class="gridThree">
+                            <!--4-->
+                            <div class="frameworks stacked" id="f1">
+                                <img src="./images/Django.png" alt="Django" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Django</h5>
+                                </div>
+                            </div>
+                            <div class="frameworks stacked" id="f2">
+                                <img src="./images/Flask.png" alt="Flask" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Flask</h5>
+                                </div>
+                            </div>
+                            <div class="frameworks stacked" id="f3">
+                                <img src="./images/Angular.png" alt="Angular" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Angular</h5>
+                                </div>
+                            </div>
+                            <div class="frameworks stacked" id="f4">
+                                <img src="./images/Express.png" alt="Express.js" class="gridImages">
+                                <div class="card_content">
+                                    <h5 class="card_title">Express.js</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--width="560" height="315"-->
+            </div>
+        </div>
+
 
 
         <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark">
@@ -144,7 +282,7 @@
 
 
 
-        
+
 
         <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark">
             <!--relative-->
