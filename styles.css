@@ -33,10 +33,25 @@ img {
     font-weight: bold;
 }
 
+
 /* Navbar links (hover) */
 .site-header a:hover {
     color: #fff;
     text-decoration: none;
+}
+
+/* Each lines of Toggle Button */
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: #8e8e8e;
+    transition: color .15s ease-in-out;
+    margin-bottom: 4px;
+}
+
+/* Toggle Button from Navbar  */
+.menu {
+    display: none;
 }
 
 /* Main Div */
@@ -137,6 +152,7 @@ animation: showup 4s 5; /*infinite*/
     padding: 0em 1.5em 0em .1em; 
 }
 
+/*Image from About Me section*/
 .roundImage{
     border-radius: 50%;
     width: 100%;
@@ -295,22 +311,27 @@ animation: showup 4s 5; /*infinite*/
     padding: 3rem;
 }
 
+/* Facebook Icon */
 .bi-facebook{
     color: #3b5998;
 }
 
+/* LinkedIn Icon */
 .bi-linkedin{
     color: #0072b1;
 }
 
+/* Instagram Icon */
 .bi-instagram{
     color: #fb3958
 }
 
+/* GitHub Icon */
 .bi-github{
     color: #fff;
 }
 
+/* Hover of Social Icons */
 .bi-facebook:hover,
 .bi-linkedin:hover,
 .bi-instagram:hover,
@@ -457,6 +478,23 @@ animation: showup 4s 5; /*infinite*/
 
 
 @media (max-width: 768px) {
+    /* Toggle Button from Navbar  */
+    .menu {
+        padding: 1.2em 1.5em;
+        width: 4.2em;
+        height: 4.5em;
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    /* Logo from Navbar*/
+    .logo {
+        width: 5em;
+        padding-left: 1em;
+    }
+
     /* Div of the Content of each Section*/
     #divSection {
         padding: 1.2em;
@@ -525,6 +563,13 @@ animation: showup 4s 5; /*infinite*/
 
 
 @media (max-width: 576px) {
+    /* Toggle Button from Navbar  */
+    .menu {
+        padding: 1.2em 1.4em;
+        width: 4em;
+        height: 4.5em;
+    }
+
     /* Div of the Content of each Section*/
     #divSection {
         margin: 0em;
