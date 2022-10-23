@@ -19,7 +19,7 @@ img {
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    transition: top 0.6s; /* Transition effect when sliding down (and up) */
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
   }
