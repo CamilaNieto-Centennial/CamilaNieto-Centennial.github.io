@@ -158,6 +158,9 @@ animation: showup 4s 5; /*infinite*/
     width: 100%;
     /*height: 145px;*/
     object-fit: contain;/*cover*/
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    -moz-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 
@@ -285,6 +288,13 @@ animation: showup 4s 5; /*infinite*/
     /*height: 145px;*/
     object-fit: contain;/*cover*/
     margin-bottom: .5em;
+}
+
+/* Shadow effect to cards */
+.card {
+    -webkit-box-shadow: 0 13px 8px #777;
+    -moz-box-shadow: 0 13px 8px #777;
+    box-shadow: 0 13px 8px #777;
 }
 
 /* Content of each card (inside of the content, lives the title) */
