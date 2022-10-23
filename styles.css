@@ -101,6 +101,10 @@ animation: showup 4s 5; /*infinite*/
     text-align: center;
 }
 
+/*Container of YouTube Video*/
+.videoContainer {
+   margin: 0em 7em 2em 7em; 
+}
 
 /* YouTube Video(s) */
 .ratio {
@@ -126,6 +130,18 @@ animation: showup 4s 5; /*infinite*/
 .subContents {
     padding-left: 1.5em;
     padding-right: 1.5em;
+}
+
+/* Container of Image on About */
+.imageContainer{
+    padding: 0em 1.5em 0em .1em; 
+}
+
+.roundImage{
+    border-radius: 50%;
+    width: 100%;
+    /*height: 145px;*/
+    object-fit: contain;/*cover*/
 }
 
 
@@ -251,7 +267,7 @@ animation: showup 4s 5; /*infinite*/
     aspect-ratio: 1 / 1;
     width: 100%;
     /*height: 145px;*/
-    object-fit: contain;/*contain*/
+    object-fit: contain;/*cover*/
     margin-bottom: .5em;
 }
 
@@ -270,6 +286,43 @@ animation: showup 4s 5; /*infinite*/
     font-family: 'Roboto Mono', monospace;
     line-height: 1.25;
 }
+
+
+
+/* Social icons (inside "Connect") */
+.social a {
+    font-size: 4.5em;
+    padding: 3rem;
+}
+
+.bi-facebook{
+    color: #3b5998;
+}
+
+.bi-linkedin{
+    color: #0072b1;
+}
+
+.bi-instagram{
+    color: #fb3958
+}
+
+.bi-github{
+    color: #fff;
+}
+
+.bi-facebook:hover,
+.bi-linkedin:hover,
+.bi-instagram:hover,
+.bi-github:hover {
+    color:#d5d5d5;
+}
+
+.bi-github:hover {
+    color:black;
+}
+
+
 
 
 #blackText {
@@ -303,6 +356,16 @@ animation: showup 4s 5; /*infinite*/
     .fw-normal {
         font-size: 1.48em;
     }
+
+    /*Container of YouTube Video*/
+    .videoContainer {
+        margin: 0em 5em 1.7em 5em; 
+     }
+
+     /* Container of Image on About */
+    .imageContainer{
+        padding: 0em .1em 0em .1em; 
+    }    
 
     /* items of each Technologies Section */
     .items {
@@ -351,6 +414,16 @@ animation: showup 4s 5; /*infinite*/
     .fw-normal {
         font-size: 1.35em;
     }
+
+    /*Container of YouTube Video*/
+    .videoContainer {
+        margin: 0em 4em 1.5em 4em; 
+     }
+
+     /* Container of Image on About */
+    .imageContainer{
+        padding: 0em; 
+    }    
 
     /* Quote Content */
     #quoteContent {
@@ -411,6 +484,16 @@ animation: showup 4s 5; /*infinite*/
         font-size: 1.1em;
     }
 
+    /*Container of YouTube Video*/
+    .videoContainer {
+        margin: 0em 1em 1.2em 1em; 
+    }
+
+    /* Container of Image on About */
+    .imageContainer{
+        padding: 0em 7em; 
+    }    
+
     /* Quote Content */
     #quoteContent {
         font-size: 1.5em;
@@ -469,6 +552,16 @@ animation: showup 4s 5; /*infinite*/
     .fw-normal {
         font-size: 1.2em;
     }
+
+    /*Container of YouTube Video*/
+    .videoContainer {
+        margin: 0em 1em .8em 1em; 
+     }
+
+     /* Container of Image on About */
+    .imageContainer{
+        padding: 0em 7.1em; 
+    }    
 
     /* Quote Content */
     #quoteContent {
