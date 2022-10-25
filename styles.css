@@ -9,6 +9,30 @@ img {
     display: block;
 }
 
+a {
+    font-weight: bold;
+}
+
+/* unvisited link */
+a:link {
+    color: #e5383b;
+}
+  
+/* visited link */
+a:visited {
+    color: #ca5310;
+}
+  
+/* mouse over link */
+a:hover {
+    color: #a4161a;
+}
+  
+  /* selected link */
+a:active {
+    color: #161a1d;
+}
+
 #containerNavbar {
     max-width: 960px;
 }
