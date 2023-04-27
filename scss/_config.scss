@@ -1,0 +1,51 @@
+$white: #ffffff;
+$black: #000000;
+$orange: #ca5310;
+$lightRed: #e5383b;
+$darkRed: #a4161a;
+$lightBlack: #161a1d;
+$superDarkGray: #8e8e8e;
+$darkGray: #777;
+$lightGray: #d5d5d5;
+
+$maximumWidth: 960px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin transition-ease-in-out {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-ease-out {
+    transition: all 0.6s ease-out;
+}
+
+@keyframes circle-in-hesitate {
+    0% {
+      clip-path: circle(0%);
+    }
+    40% {
+      clip-path: circle(40%);
+    }
+    100% {
+      clip-path: circle(125%);
+    }
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@mixin gridSetup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5em;
+}

@@ -1,0 +1,43 @@
+/*
+=============== 
+CONTACT
+===============
+*/
+
+/* Social icons */
+.social a {
+    font-size: 4.5em;
+    padding: 3rem;
+}
+
+/* Facebook Icon */
+.bi-facebook{
+    color: #3b5998;
+}
+
+/* LinkedIn Icon */
+.bi-linkedin{
+    color: #0072b1;
+}
+
+/* Instagram Icon */
+.bi-instagram{
+    color: #fb3958
+}
+
+/* GitHub Icon */
+.bi-github{
+    color: $white;
+}
+
+/* Hover on Social Icons */
+.bi-facebook:hover,
+.bi-linkedin:hover,
+.bi-instagram:hover,
+.bi-github:hover {
+    color: $lightGray;
+}
+
+.bi-github:hover {
+    color:$black;
+}

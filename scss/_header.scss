@@ -1,0 +1,78 @@
+/*
+=============== 
+HEADER
+===============
+*/
+
+.header {
+    background-color: rgba(0, 0, 0, .85);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include transition-ease-out; // Transition effect when sliding down (and up)
+    backdrop-filter: saturate(180%) blur(20px);
+
+    /*Nav Max Width*/
+    #maxWidth {
+        max-width: $maximumWidth;
+        padding: 0 2rem 0 2rem;
+    }
+
+    /* List of Links */
+    .menu-nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        min-width: 90%;
+    }
+
+
+    /* Links */
+    nav a {
+        display: block;
+        color: $superDarkGray;
+        transition: color .25s ease-in;
+        font-size: 20px;
+        font-weight: bold;
+        //padding-left: 3rem;
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    /* Each line of the Hamburger Button */
+    .menu>.menu-line {
+        @include transition-ease-in-out;
+
+        &.open {
+            transform: rotate(720deg);
+
+            &:first-of-type {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:last-of-type {
+                transform: rotate(-45deg) translate(0px, 0px);
+            }
+        }
+    }
+}
+
+
+/* Toggle Button*/
+.menu {
+    display: none;
+
+    /* Each line */
+    .menu-line {
+        width: 20px;
+        height: 3px;
+        background-color: $superDarkGray;
+        margin-bottom: 4px;
+    }
+}

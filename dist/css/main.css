@@ -1,130 +1,24 @@
 @charset "UTF-8";
-html, body {
-  background-color: #ffffff;
-  margin: 0px;
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+@keyframes circle-in-hesitate {
+  0% {
+    -webkit-clip-path: circle(0%);
+            clip-path: circle(0%);
+  }
+  40% {
+    -webkit-clip-path: circle(40%);
+            clip-path: circle(40%);
+  }
+  100% {
+    -webkit-clip-path: circle(125%);
+            clip-path: circle(125%);
+  }
 }
-
-a {
-  font-weight: bold;
-}
-
-/* unvisited link */
-a:link {
-  color: #e5383b;
-}
-
-/* visited link */
-a:visited {
-  color: #ca5310;
-}
-
-/* mouse over link */
-a:hover {
-  color: #a4161a;
-}
-
-/* selected link */
-a:active {
-  color: #161a1d;
-}
-
-#containerNavbar {
-  max-width: 960px;
-}
-
-/* Navbar */
-.site-header {
-  background-color: rgba(0, 0, 0, 0.85);
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
-  transition: top 0.6s; /* Transition effect when sliding down (and up) */
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-
-/* Navbar links (normal) */
-.site-header a {
-  display: block;
-  color: #8e8e8e;
-  transition: color 0.15s ease-in-out;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Navbar links (hover) */
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Each lines of Toggle Button */
-.menu-line {
-  width: 20px;
-  height: 3px;
-  background-color: #8e8e8e;
-  transition: color 0.15s ease-in-out;
-  margin-bottom: 4px;
-}
-
-/* Toggle Button from Navbar  */
-.menu {
-  display: none;
-}
-
-/* Main Div */
-#mainDiv {
-  height: 100vh;
-}
-
-#centerDiv {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-/* My Name inside Main Div */
-#myName {
-  font-family: "Damion", cursive;
-  font-size: 7.8em;
-}
-
-/* Text inside Main Div */
-.fw-normal {
-  color: #fff;
-  font-size: 1.7em;
-  text-align: center;
-}
-
-/* Animation on Text inside Main Div */
-/*.textAnimation {
-    display:inline-block;
-    overflow:hidden;
-    white-space:nowrap;
-}*/
-/* Animation on Title inside Main Div */
-.textAnimation:first-of-type {
-  /* For increasing performance 
-  ID/Class should've been used. 
-  For a small demo 
-  it's okaish for now */
-  animation: showup 4s 5; /*infinite*/
-}
-
-/* Animation on Subtitle inside Main Div */
-.textAnimation:last-of-type {
-  animation: showup 4s 5;
-}
-
-/* Showup rules */
 @keyframes showup {
   0% {
     opacity: 0;
@@ -139,53 +33,168 @@ a:active {
     opacity: 0;
   }
 }
-/* divSections (About, Technologies, ...) */
-#divSection {
+/*
+=============== 
+HEADER
+===============
+*/
+.header {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.6s ease-out;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  /*Nav Max Width*/
+  /* List of Links */
+  /* Links */
+  /* Each line of the Hamburger Button */
+}
+.header #maxWidth {
+  max-width: 960px;
+  padding: 0 2rem 0 2rem;
+}
+.header .menu-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-width: 90%;
+}
+.header nav a {
+  display: block;
+  color: #8e8e8e;
+  transition: color 0.25s ease-in;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header nav a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header .menu > .menu-line {
+  transition: all 0.5s ease-in-out;
+}
+.header .menu > .menu-line.open {
+  transform: rotate(720deg);
+}
+.header .menu > .menu-line.open:first-of-type {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.header .menu > .menu-line.open:nth-child(2) {
+  display: none;
+}
+.header .menu > .menu-line.open:last-of-type {
+  transform: rotate(-45deg) translate(0px, 0px);
+}
+
+/* Toggle Button*/
+.menu {
+  display: none;
+  /* Each line */
+}
+.menu .menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: #8e8e8e;
+  margin-bottom: 4px;
+}
+
+/*
+=============== 
+INTRO
+===============
+*/
+/* Intro Section */
+#mainDiv {
+  height: 100vh;
+}
+
+/* In Circle Transition */
+[transition-style="in:circle:hesitate"] {
+  animation: 3.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+}
+
+/* Text centered */
+#centerDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* My Name */
+#myName {
+  font-family: "Damion", cursive;
+  font-size: 7.7em;
+}
+
+/* My Roles */
+.fw-normal {
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*
+========================================
+SECTIONS - About, Technologies, Projects
+========================================
+*/
+.section {
   margin: 2em auto 2em;
   text-align: center;
+  /* Title of each Section */
+  /* Big content */
+  /* Subtitle */
 }
-
-/*Container of YouTube Video*/
-.videoContainer {
-  margin: 0em 7em 2em 7em;
-}
-
-/* YouTube Video(s) */
-.ratio {
-  margin: auto;
-  text-align: center;
-}
-
-/* Titles of each Section */
-.subtitles {
+.section .title {
   font-family: "Montserrat", sans-serif;
   font-size: 3.2em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
-
-/* Content of each Section */
-.contents {
+.section .content {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  /* Small subcontent */
+}
+.section .content .subContent {
   font-size: 1.15em;
   text-align: justify;
 }
-
-/* Div of the Content of each Section*/
-.subContents {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+.section .subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  text-align: left;
 }
 
-/* Container of Image on About */
+/*
+=============== 
+ABOUT
+===============
+*/
+/* YouTube Video Container */
+.videoContainer {
+  margin: 0em 0em 2em 0em;
+  /* My Video */
+}
+.videoContainer .ratio {
+  margin: auto;
+  text-align: center;
+}
+
+/* Image Container */
 .imageContainer {
-  padding: 0em 1.5em 0em 0.1em;
+  padding: 0em;
+  /* My Image */
 }
-
-/*Image from About Me section*/
-.roundImage {
+.imageContainer .roundImage {
   border-radius: 50%;
   width: 100%;
-  /*height: 145px;*/
   -o-object-fit: contain;
      object-fit: contain; /*cover*/
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -193,16 +202,40 @@ a:active {
   -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* QUOTE (give it a background image)*/
-#quote {
-  background-color: transparent;
-  background-size: cover;
-  background-image: url("https://i.postimg.cc/K8YXPJNW/autumn.jpg");
-  position: relative;
+/* Links */
+.LinksList > li > a {
+  /* unvisited link */
+  /* visited link */
+  /* hovered link */
+  /* selected link */
+}
+.LinksList > li > a:link {
+  color: #e5383b;
+}
+.LinksList > li > a:visited {
+  color: #ca5310;
+}
+.LinksList > li > a:hover {
+  color: #a4161a;
+}
+.LinksList > li > a:active {
+  color: #161a1d;
 }
 
-/* Make a Solid Color And A Gradient for the Quote*/
-#quote:after {
+/*
+=============== 
+QUOTE
+===============
+*/
+/* Quote Container (Background Image) */
+.quoteContainer {
+  background-color: transparent;
+  background-size: cover;
+  background-image: url("../images/autumn.jpg");
+  position: relative;
+  /* Gradient Color in the Background Image */
+}
+.quoteContainer:after {
   content: "";
   position: absolute;
   left: 0;
@@ -212,18 +245,14 @@ a:active {
   background-color: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
-
-/* Quote Content (p) */
-#quoteContent {
+.quoteContainer .quoteContent {
   font-family: "Carter One", cursive;
   font-size: 2em;
   position: relative;
   color: #f5f3f4;
   z-index: 3;
 }
-
-/* Quote Title (h3) */
-#quoteTitle {
+.quoteContainer .quoteAuthor {
   font-family: "Carter One", cursive;
   font-size: 1.4em;
   position: relative;
@@ -231,24 +260,12 @@ a:active {
   z-index: 3;
 }
 
-/* items of each TECHNOLOGIES Section */
-.items {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  text-align: left;
-}
-
-/* GRID LAYOUT (Applied on Technologies Section) ⏬ */
-/* Languages, dbs, and frameworks Grids */
-.languages, .dbs, .frameworks {
-  padding: 0.6rem 0.4rem;
-  text-align: center;
-  /*border: 3px inset darkblue;*/ /*inset*/
-  font-size: 1em;
-  aspect-ratio: 1/1.42;
-}
-
+/*
+=============== 
+TECHNOLOGIES
+===============
+*/
+/* GRID LAYOUT ⏬ */
 /* Container for Grid with 5 columns */
 .gridContainerPrimary {
   margin: 0em 6.5em;
@@ -265,7 +282,6 @@ a:active {
   grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
   gap: 1rem;
   margin-bottom: 1.5em;
-  /*text-align: center;*/
 }
 
 /* dbs Grid */
@@ -284,10 +300,18 @@ a:active {
   margin-bottom: 1.5em;
 }
 
-/* Testing card contents */
-/*#l3, #l2, #d2, #d3, 
-#l1, #l4, #l5, d1, #d2, #d3, #d4,
-#f1, #f2, #f3, #f4 {
+/* Languages, dbs, and frameworks Grids */
+.languages, .dbs, .frameworks {
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+  font-size: 1em;
+  aspect-ratio: 1/1.42;
+}
+
+/* Testing card subContent */
+/*#l3, #l2,
+#l1, #l4, #l5, #d1, #d2, #d3, #d4,
+#f1, #f2, #f3, #f4, #f5 {
     background-color: black;
 }*/
 .stacked {
@@ -303,34 +327,43 @@ a:active {
 .gridImages {
   aspect-ratio: 1/1;
   width: 100%;
-  /*height: 145px;*/
   -o-object-fit: contain;
-     object-fit: contain; /*cover*/
+     object-fit: contain;
   margin-bottom: 0.5em;
 }
 
-/* Shadow effect to cards */
-.card {
-  box-shadow: 0 13px 8px #777;
-}
-
-/* Content of each card (inside of the content, lives the title) */
-.card_content {
+/* Rectangle below each Image */
+.gridRectangle {
   z-index: 10;
-  background: white;
+  background: #ffffff;
   align-self: end;
   margin: 0.5rem 0.5rem 0.3rem;
   padding: 0.5rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-/* Titles of each Card inside the Grids */
-.card_title {
+/* Title inside the Rectangle */
+.gridTitle {
   font-family: "Roboto Mono", monospace;
   line-height: 1.25;
 }
 
-/* Social icons (inside "Connect") */
+/*
+=============== 
+PROJECTS
+===============
+*/
+/* Shadow effect to cards */
+.card {
+  box-shadow: 0 13px 8px #777;
+}
+
+/*
+=============== 
+CONTACT
+===============
+*/
+/* Social icons */
 .social a {
   font-size: 4.5em;
   padding: 3rem;
@@ -353,10 +386,10 @@ a:active {
 
 /* GitHub Icon */
 .bi-github {
-  color: #fff;
+  color: #ffffff;
 }
 
-/* Hover of Social Icons */
+/* Hover on Social Icons */
 .bi-facebook:hover,
 .bi-linkedin:hover,
 .bi-instagram:hover,
@@ -365,46 +398,45 @@ a:active {
 }
 
 .bi-github:hover {
-  color: black;
-}
-
-#blackText {
-  color: black;
+  color: #000000;
 }
 
 /*--- MEDIA QUERIES --*/
+/*
+=============== 
+MAX 1200px
+===============
+*/
 @media (max-width: 1200px) {
-  /* Div of the Content of each Section*/
-  #divSection {
+  /* SECTIONS - About, Technologies, Projects */
+  .section {
     margin: 1.5em auto 1.5em;
-    text-align: center;
+    /* Title of each Section */
+    /* Subtitle */
   }
-  /* Titles of each Section */
-  .subtitles {
+  .section .title {
     font-size: 3em;
     margin-bottom: 0.5em;
   }
-  /* My Name inside Main Div */
-  #myName {
-    font-size: 6em;
-  }
-  /* Text inside Main Div */
-  .fw-normal {
-    font-size: 1.48em;
-  }
-  /*Container of YouTube Video*/
-  .videoContainer {
-    margin: 0em 5em 1.7em 5em;
-  }
-  /* Container of Image on About */
-  .imageContainer {
-    padding: 0em 0.1em 0em 0.1em;
-  }
-  /* items of each Technologies Section */
-  .items {
+  .section .subtitle {
     font-size: 1.4em;
     margin-bottom: 0.6em;
   }
+  /* INTRO */
+  /* My Name */
+  #myName {
+    font-size: 6.7em;
+  }
+  /* My Roles */
+  .fw-normal {
+    font-size: 1.85em;
+  }
+  /* ABOUT */
+  /* YouTube Video Container */
+  .videoContainer {
+    margin: 0em 0em 1.7em 0em;
+  }
+  /* TECHNOLOGIES */
   /* Container for Grid with 5 columns */
   .gridContainerPrimary {
     margin: 0em 3em;
@@ -414,50 +446,59 @@ a:active {
     margin: 0em 6em;
   }
 }
+/*
+=============== 
+MAX 992px
+===============
+*/
 @media (max-width: 992px) {
-  /* Div of the Content of each Section*/
-  #divSection {
+  /* SECTIONS - About, Technologies, Projects */
+  .section {
     margin: 1.2em auto 1.2em;
     text-align: center;
+    /* Title of each Section */
+    /* Subtitle */
   }
-  /* Titles of each Section */
-  .subtitles {
+  .section .title {
     font-size: 2.6em;
     margin-bottom: 0.4em;
   }
-  /* Content of each Section */
-  .contents {
+  .section .content {
+    /* Small subcontent */
+  }
+  .section .content .subContent {
     font-size: 1.1em;
   }
-  /* My Name inside Main Div */
-  #myName {
-    font-size: 5.7em;
-  }
-  /* Text inside Main Div */
-  .fw-normal {
-    font-size: 1.35em;
-  }
-  /*Container of YouTube Video*/
-  .videoContainer {
-    margin: 0em 4em 1.5em 4em;
-  }
-  /* Container of Image on About */
-  .imageContainer {
-    padding: 0em;
-  }
-  /* Quote Content */
-  #quoteContent {
-    font-size: 1.75em;
-  }
-  /* Quote Title */
-  #quoteTitle {
-    font-size: 1.25em;
-  }
-  /* items of each Technologies Section */
-  .items {
+  .section .subtitle {
     font-size: 1.3em;
     margin-bottom: 0.5em;
   }
+  /* INTRO */
+  /* My Name */
+  #myName {
+    font-size: 6.5em;
+  }
+  /* My Roles */
+  .fw-normal {
+    font-size: 1.7em;
+  }
+  /* ABOUT */
+  /* YouTube Video Container */
+  .videoContainer {
+    margin: 0em 0em 1.5em 0em;
+  }
+  /* Image Container */
+  .imageContainer {
+    padding: 0em 12em;
+  }
+  /* QUOTE */
+  .quoteContent {
+    font-size: 1.75em;
+  }
+  .quoteAuthor {
+    font-size: 1.25em;
+  }
+  /* TECHNOLOGIES */
   /* Container for Grid with 5 columns */
   .gridContainerPrimary {
     margin: 0em 1.5em;
@@ -467,9 +508,99 @@ a:active {
     margin: 0em 2em;
   }
 }
-@media (max-width: 768px) {
-  /* Toggle Button from Navbar  */
-  .menu {
+/*
+=============== 
+MAX 767px
+===============
+*/
+@media (max-width: 767px) {
+  /* HEADER */
+  .header {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+    /* NavBar */
+    /* Logo from Navbar */
+    /* List of Links (without Logo and Hamburger) */
+    /* ALL Links */
+    /* Toggle or Hanburger Button from Navbar  */
+  }
+  .header #maxWidth {
+    max-width: 960px;
+    padding: 0;
+  }
+  .header .nav {
+    max-height: 90px;
+  }
+  .header .nav.open {
+    max-height: 100%;
+  }
+  .header .logo {
+    padding-left: 1em;
+  }
+  .header .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    overflow: hidden;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    transition: all 0.6s ease-out;
+    /* Each Item (except Hamburger and Logo) */
+    /* Iterate through the links in the nav (Time that will show up each link) */
+  }
+  .header .menu-nav.open {
+    transform: translateY(0);
+    height: 100vh;
+    padding-bottom: 7.5em;
+    visibility: visible;
+  }
+  .header .menu-nav .nav-item {
+    transform: translateX(120vw);
+    transition: all 0.5s ease-in-out;
+    /* Each Link (except Hamburger and Logo) */
+  }
+  .header .menu-nav .nav-item.open {
+    transform: translateX(0);
+  }
+  .header .menu-nav .nav-item a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 2rem 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .menu-nav .nav-item:nth-child(1) {
+    transition-delay: 0.3s;
+  }
+  .header .menu-nav .nav-item:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .header .menu-nav .nav-item:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  .header .menu-nav .nav-item:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  .header .menu-nav .nav-item:nth-child(5) {
+    transition-delay: 0.7s;
+  }
+  .header nav a {
+    color: #8e8e8e;
+    transition: color 0.25s ease-in;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .header nav a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .header .menu {
     padding: 1.2em 1.5em;
     width: 4.2em;
     height: 4.5em;
@@ -477,55 +608,70 @@ a:active {
     display: initial;
     position: absolute;
     cursor: pointer;
+    /* Each line of the Hamburger Button */
   }
-  /* Logo from Navbar*/
-  .logo {
-    width: 5em;
-    padding-left: 1em;
+  .header .menu .menu-line {
+    transition: all 0.5s ease-in-out;
   }
-  /* Div of the Content of each Section*/
-  #divSection {
+  .header .menu .menu-line.open {
+    transform: rotate(720deg);
+  }
+  .header .menu .menu-line.open:first-of-type {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .header .menu .menu-line.open:nth-child(2) {
+    display: none;
+  }
+  .header .menu .menu-line.open:last-of-type {
+    transform: rotate(-45deg) translate(0px, 0px);
+  }
+  /* SECTIONS - About, Technologies, Projects */
+  .section {
     padding: 1.2em;
     margin: auto;
+    /* Title of each Section */
+    /* Subtitle */
   }
-  /* Titles of each Section */
-  .subtitles {
+  .section .title {
     font-size: 2.2em;
     margin-bottom: 0.4em;
   }
-  /* Content of each Section */
-  .contents {
+  .section .content {
+    /* Small subcontent */
+  }
+  .section .content .subContent {
     font-size: 1em;
   }
-  /* My Name inside Main Div */
-  #myName {
-    font-size: 4.4em;
-  }
-  /* Text inside Main Div */
-  .fw-normal {
-    font-size: 1.1em;
-  }
-  /*Container of YouTube Video*/
-  .videoContainer {
-    margin: 0em 1em 1.2em 1em;
-  }
-  /* Container of Image on About */
-  .imageContainer {
-    padding: 0em 7em;
-  }
-  /* Quote Content */
-  #quoteContent {
-    font-size: 1.5em;
-  }
-  /* Quote Title */
-  #quoteTitle {
-    font-size: 1.1em;
-  }
-  /* items of each Technologies Section */
-  .items {
+  .section .subtitle {
     font-size: 1.25em;
     margin-bottom: 0.45em;
   }
+  /* INTRO */
+  /* My Name */
+  #myName {
+    font-size: 6em;
+  }
+  /* My Roles */
+  .fw-normal {
+    font-size: 1.5em;
+  }
+  /* ABOUT */
+  /* YouTube Video Container */
+  .videoContainer {
+    margin: 0em 0em 1.2em 0em;
+  }
+  /* Image Container */
+  .imageContainer {
+    padding: 0em 6.5em;
+  }
+  /* QUOTE */
+  .quoteContent {
+    font-size: 1.5em;
+  }
+  .quoteAuthor {
+    font-size: 1.1em;
+  }
+  /* TECHNOLOGIES */
   /* Container for Grid with 5 columns */
   .gridContainerPrimary {
     margin: 0em 0em;
@@ -535,59 +681,81 @@ a:active {
     margin: 0em 0.5em;
   }
 }
+/*
+=============== 
+MAX 576px
+===============
+*/
 @media (max-width: 576px) {
+  /* HEADER */
   /* Toggle Button from Navbar  */
   .menu {
     padding: 1.2em 1.4em;
     width: 4em;
     height: 4.5em;
   }
-  /* Div of the Content of each Section*/
-  #divSection {
+  /* SECTIONS - About, Technologies, Projects */
+  .section {
     margin: 0em;
     padding: 1.4em;
+    /* Title of each Section */
+    /* Big content */
+    /* Subtitle */
   }
-  /* Div of the Content of each Section*/
-  .subContents {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-  /* Titles of each Section */
-  .subtitles {
+  .section .title {
     font-size: 2.3em;
     margin-bottom: 0.4em;
   }
-  /* My Name inside Main Div */
-  #myName {
-    font-size: 4.1em;
+  .section .content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
-  /* Text inside Main Div */
-  .fw-normal {
-    font-size: 1.2em;
-  }
-  /*Container of YouTube Video*/
-  .videoContainer {
-    margin: 0em 1em 0.8em 1em;
-  }
-  /* Container of Image on About */
-  .imageContainer {
-    padding: 0em 7.1em;
-  }
-  /* Quote Content */
-  #quoteContent {
-    font-size: 1.35em;
-  }
-  /* Quote Title */
-  #quoteTitle {
-    font-size: 1em;
-  }
-  /* items of each Technologies Section */
-  .items {
+  .section .subtitle {
     font-size: 1.2em;
     margin-bottom: 0.4em;
   }
+  /* INTRO */
+  /* My Name */
+  #myName {
+    font-size: 5.2em;
+  }
+  /* My Roles */
+  .fw-normal {
+    font-size: 1.4em;
+  }
+  /* ABOUT */
+  /* YouTube Video Container */
+  .videoContainer {
+    margin: 0em 0em 0.8em 0em;
+  }
+  /* Image Container */
+  .imageContainer {
+    padding: 0em 6.5em;
+  }
+  /* QUOTE */
+  .quoteContent {
+    font-size: 1.35em;
+  }
+  .quoteAuthor {
+    font-size: 1em;
+  }
+  /* TECHNOLOGIES */
   /* Container for Grid with 4 columns */
   .gridContainerSecondary {
     margin: 0em 0em;
   }
+}
+html, body {
+  background-color: #ffffff;
+  margin: 0px;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

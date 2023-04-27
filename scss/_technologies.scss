@@ -1,0 +1,81 @@
+/*
+=============== 
+TECHNOLOGIES
+===============
+*/
+
+/* GRID LAYOUT ⏬ */
+/* Container for Grid with 5 columns */
+.gridContainerPrimary{
+    margin: 0em 6.5em; 
+}
+
+/* Container for Grid with 4 columns */
+.gridContainerSecondary {
+    margin: 0em 10em;
+}
+
+/* Languages Grid */
+.gridOne {
+    @include gridSetup;
+}
+
+/* dbs Grid */
+.gridTwo {
+    @include gridSetup;
+}
+
+/* Frameworks Grid */
+.gridThree {
+    @include gridSetup;
+}
+
+/* Languages, dbs, and frameworks Grids */
+.languages, .dbs, .frameworks {
+    padding: .6rem .4rem;
+    text-align: center;
+    //border: 3px inset darkblue;
+    font-size: 1em;
+    aspect-ratio: 1/1.42;
+}
+
+
+/* Testing card subContent */
+/*#l3, #l2,
+#l1, #l4, #l5, #d1, #d2, #d3, #d4,
+#f1, #f2, #f3, #f4, #f5 {
+    background-color: black;
+}*/
+
+.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/* Images inside Grids */
+.gridImages {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: contain; //cover
+    margin-bottom: .5em;
+}
+
+/* Rectangle below each Image */
+.gridRectangle {
+    z-index: 10;
+    background: $white;
+    align-self: end;
+    margin: .5rem .5rem .3rem;
+    padding: .5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+/* Title inside the Rectangle */
+.gridTitle {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.25;
+}

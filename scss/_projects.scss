@@ -1,0 +1,12 @@
+/*
+=============== 
+PROJECTS
+===============
+*/
+
+/* Shadow effect to cards */
+.card {
+    -webkit-box-shadow: 0 13px 8px $darkGray;
+    -moz-box-shadow: 0 13px 8px $darkGray;
+    box-shadow: 0 13px 8px $darkGray;
+}

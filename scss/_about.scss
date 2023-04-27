@@ -1,0 +1,55 @@
+/*
+=============== 
+ABOUT
+===============
+*/
+
+/* YouTube Video Container */
+.videoContainer {
+   margin: 0em 0em 2em 0em; 
+
+   /* My Video */
+    .ratio {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+/* Image Container */
+.imageContainer{
+    padding: 0em;
+
+    /* My Image */
+    .roundImage{
+        border-radius: 50%;
+        width: 100%;
+        object-fit: contain;/*cover*/
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        -moz-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+}
+
+/* Links */
+.LinksList>li>a {
+    /* unvisited link */
+    &:link {
+        color: $lightRed;
+    }
+
+    /* visited link */
+    &:visited {
+        color: $orange;
+    }
+
+    /* hovered link */
+    &:hover {
+        color: $darkRed;
+    }
+
+    /* selected link */
+    &:active {
+        color: $lightBlack;
+    }
+}
+

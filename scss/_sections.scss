@@ -1,0 +1,38 @@
+/*
+========================================
+SECTIONS - About, Technologies, Projects
+========================================
+*/
+
+.section {
+    margin: 2em auto 2em;
+    text-align: center;
+
+    /* Title of each Section */
+    .title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3.2em;
+        margin-bottom: .6em;
+        font-weight: bold;
+    }
+
+    /* Big content */
+    .content {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
+        /* Small subcontent */
+        .subContent {
+            font-size: 1.15em;
+            text-align: justify;
+        }
+    }
+
+    /* Subtitle */
+    .subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+        text-align: left;
+    }
+}

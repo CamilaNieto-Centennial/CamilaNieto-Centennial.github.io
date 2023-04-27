@@ -1,0 +1,391 @@
+/*--- MEDIA QUERIES --*/
+/*
+=============== 
+MAX 1200px
+===============
+*/
+@media (max-width: 1200px) {
+    /* SECTIONS - About, Technologies, Projects */
+    .section {
+        margin: 1.5em auto 1.5em;
+
+        /* Title of each Section */
+        .title {
+            font-size: 3em;
+            margin-bottom: .5em;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.4em;
+            margin-bottom: .6em;
+        }
+    }
+
+    /* INTRO */
+    /* My Name */
+    #myName {
+        font-size: 6.7em;
+    }
+    /* My Roles */
+    .fw-normal {
+        font-size: 1.85em;
+    }
+
+    /* ABOUT */
+    /* YouTube Video Container */
+    .videoContainer {
+        margin: 0em 0em 1.7em 0em; 
+     }
+
+
+    /* TECHNOLOGIES */
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 3em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 6em;
+    }
+}
+
+
+/*
+=============== 
+MAX 992px
+===============
+*/
+@media (max-width: 992px) {
+    /* SECTIONS - About, Technologies, Projects */
+    .section {
+        margin: 1.2em auto 1.2em;
+        text-align: center;
+
+        /* Title of each Section */
+        .title {
+            font-size: 2.6em;
+            margin-bottom: .4em;
+        }
+
+        .content {
+            /* Small subcontent */
+            .subContent {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: .5em;
+        }
+    }
+
+    /* INTRO */
+    /* My Name */
+    #myName {
+        font-size: 6.5em;
+    }
+    /* My Roles */
+    .fw-normal {
+        font-size: 1.7em;
+    }
+
+    /* ABOUT */
+    /* YouTube Video Container */
+    .videoContainer {
+        margin: 0em 0em 1.5em 0em; 
+    }
+    /* Image Container */
+    .imageContainer{
+        padding: 0em 12em; 
+    } 
+
+    /* QUOTE */
+    .quoteContent {
+        font-size: 1.75em;
+    }
+    .quoteAuthor {
+        font-size: 1.25em;
+    }
+
+    /* TECHNOLOGIES */
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 1.5em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 2em;
+    }
+}
+
+
+/*
+=============== 
+MAX 767px
+===============
+*/
+@media (max-width: 767px) {
+    /* HEADER */
+    .header {
+        background-color: rgba(0, 0, 0, .85);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        backdrop-filter: saturate(180%) blur(20px);
+
+        // Max Width of NavBar
+        #maxWidth {
+            max-width: $maximumWidth;
+            padding: 0;
+        }
+
+        /* NavBar */
+        .nav {
+            max-height: 90px;
+            &.open {
+                max-height: 100%;
+            }
+        }
+
+        /* Logo from Navbar */
+        .logo {
+            padding-left: 1em;
+        }
+
+        /* List of Links (without Logo and Hamburger) */
+        .menu-nav {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            overflow: hidden;
+            padding-right: 1rem;
+            transform: translateY(-100%);
+            @include transition-ease-out;
+
+            &.open {
+                transform: translateY(0);
+                height: 100vh;
+                padding-bottom: 7.5em;
+                visibility: visible;
+            }
+
+            /* Each Item (except Hamburger and Logo) */
+            .nav-item {
+                transform: translateX(120vw);
+                @include transition-ease-in-out;
+
+                &.open {
+                    transform: translateX(0);
+                }
+
+                /* Each Link (except Hamburger and Logo) */
+                a {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    padding: 2rem 0;
+                    @include transition-ease-in-out;
+                }
+            }
+
+            /* Iterate through the links in the nav (Time that will show up each link) */
+            @for $i from 1 through 5 {
+                .nav-item:nth-child(#{$i}) {
+                    transition-delay: ($i * 0.1s) + 0.2s;
+                }
+            }
+        }
+
+        /* ALL Links */
+        nav a {
+            color: $superDarkGray;
+            transition: color .25s ease-in;
+            font-size: 20px;
+            font-weight: bold;
+            
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        /* Toggle or Hanburger Button from Navbar  */
+        .menu {
+            padding: 1.2em 1.5em;
+            width: 4.2em;
+            height: 4.5em;
+            align-self: flex-end;
+            display: initial;
+            position: absolute;
+            cursor: pointer;
+
+            /* Each line of the Hamburger Button */
+            .menu-line {
+                @include transition-ease-in-out;
+
+                &.open {
+                    transform: rotate(720deg);
+
+                    &:first-of-type {
+                        transform: rotate(45deg) translate(5px, 5px);
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:last-of-type {
+                        transform: rotate(-45deg) translate(0px, 0px);
+                    }
+                }
+            }
+        }
+    }
+
+    /* SECTIONS - About, Technologies, Projects */
+    .section {
+        padding: 1.2em;
+        margin: auto;
+
+        /* Title of each Section */
+        .title {
+            font-size: 2.2em;
+            margin-bottom: .4em;
+        }
+
+        .content {
+            /* Small subcontent */
+            .subContent {
+                font-size: 1em;
+            }
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.25em;
+            margin-bottom: .45em;
+        }
+    }
+
+    /* INTRO */
+    /* My Name */
+    #myName {
+        font-size: 6em;
+    }
+    /* My Roles */
+    .fw-normal {
+        font-size: 1.5em;
+    }
+
+    /* ABOUT */
+    /* YouTube Video Container */
+    .videoContainer {
+        margin: 0em 0em 1.2em 0em; 
+    }  
+    /* Image Container */
+    .imageContainer{
+        padding: 0em 6.5em; 
+    }  
+
+    /* QUOTE */
+    .quoteContent {
+        font-size: 1.5em;
+    }
+    .quoteAuthor {
+        font-size: 1.1em;
+    }    
+
+    /* TECHNOLOGIES */
+    /* Container for Grid with 5 columns */
+    .gridContainerPrimary{
+        margin: 0em 0em; 
+    }
+
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em .5em;
+    }
+}
+
+
+/*
+=============== 
+MAX 576px
+===============
+*/
+@media (max-width: 576px) {
+    /* HEADER */
+    /* Toggle Button from Navbar  */
+    .menu {
+        padding: 1.2em 1.4em;
+        width: 4em;
+        height: 4.5em;
+    }
+
+
+    /* SECTIONS - About, Technologies, Projects */
+    .section {
+        margin: 0em;
+        padding: 1.4em;
+
+        /* Title of each Section */
+        .title {
+            font-size: 2.3em;
+            margin-bottom: .4em;
+        }
+
+        /* Big content */
+        .content {
+            padding-left: .5em;
+            padding-right: .5em;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: .4em;
+        }
+    }
+
+
+    /* INTRO */
+    /* My Name */
+    #myName {
+        font-size: 5.2em;
+    }
+    /* My Roles */
+    .fw-normal {
+        font-size: 1.4em;
+    }
+
+    /* ABOUT */
+    /* YouTube Video Container */
+    .videoContainer {
+        margin: 0em 0em .8em 0em; 
+    }
+    /* Image Container */
+    .imageContainer{
+        padding: 0em 6.5em; 
+    }    
+
+    /* QUOTE */
+    .quoteContent {
+        font-size: 1.35em;
+    }
+    .quoteAuthor {
+        font-size: 1em;
+    }  
+
+    /* TECHNOLOGIES */
+    /* Container for Grid with 4 columns */
+    .gridContainerSecondary {
+        margin: 0em 0em;
+    }
+}
