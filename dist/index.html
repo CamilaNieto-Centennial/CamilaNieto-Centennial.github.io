@@ -2,424 +2,475 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
-    <!--From Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--<link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Damion&family=Fredoka+One&family=Montserrat:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!--Icon link-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<!--From Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!--<link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">-->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Carter+One&family=Damion&family=Fredoka+One&family=Montserrat:wght@700&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap"
+		rel="stylesheet">
 
-    <!-- Transition CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+	<!--Icon link-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css" defer>
+	<!-- Transition CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/transition-style">
+
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="./css/main.css" defer>
 </head>
 
 <body>
-    <header class="header sticky-top" id="navbar">
-        <nav class="nav container d-flex flex-column flex-md-row justify-content-between py-3" id="maxWidth">
-            <a class="py-3 logo" href="#" aria-label="Product">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block" role="img"
-                    viewBox="0 0 24 24">
-                    <title>Product</title>
-                    <circle cx="12" cy="12" r="10" />
-                    <path
-                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-                </svg>
-            </a>
-            <div class="menu-nav">
-                <div class="nav-item">
-                    <a onclick = "toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList" href="#">Home</a>
-                </div>
-                <div class="nav-item">
-                    <a onclick = "toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList" href="#aboutMe">About</a>
-                </div>
-                <div class="nav-item">
-                    <a onclick = "toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList" href="#technologies">Technologies</a>
-                </div>
-                <div class="nav-item">
-                    <a onclick = "toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList" href="#projects">Projects</a>
-                </div>
-                <div class="nav-item">
-                    <a onclick = "toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList" href="#contactMe">Contact</a><!--d-none -->
-                </div>
-            </div>
-            <div class="menu" id="toggle-button">
-                <div class="menu-line"></div>
-                <div class="menu-line"></div>
-                <div class="menu-line"></div>
-            </div>    
-        </nav>
-    </header>
+	<header class="header sticky-top" id="navbar">
+		<nav class="nav container d-flex flex-column flex-md-row justify-content-between py-3" id="maxWidth">
+			<a class="py-3 logo" href="#" aria-label="Product">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+					stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block" role="img"
+					viewBox="0 0 24 24">
+					<title>Product</title>
+					<circle cx="12" cy="12" r="10" />
+					<path
+						d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+				</svg>
+			</a>
+			<div class="menu-nav">
+				<div class="nav-item">
+					<a onclick="toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList"
+						href="#">Home</a>
+				</div>
+				<div class="nav-item">
+					<a onclick="toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList"
+						href="#aboutMe">About</a>
+				</div>
+				<div class="nav-item">
+					<a onclick="toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList"
+						href="#technologies">Technologies</a>
+				</div>
+				<div class="nav-item">
+					<a onclick="toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList"
+						href="#projects">Projects</a>
+				</div>
+				<div class="nav-item">
+					<a onclick="toggleMenu(); toggleLinks()" class="py-2 d-none d-md-inline-block navList" id="navList"
+						href="#contactMe">Contact</a><!--d-none -->
+				</div>
+			</div>
+			<div class="menu" id="toggle-button">
+				<div class="menu-line"></div>
+				<div class="menu-line"></div>
+				<div class="menu-line"></div>
+			</div>
+		</nav>
+	</header>
 
 
-    <main>
-        <div transition-style="in:circle:hesitate" class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark" id="mainDiv">
-            <div class="col-10 col-sm-10 col-md-9 col-lg-7 col-xl-7 mx-auto" id="centerDiv">
-                <div class="textAnimation">
-                    <h1 class="display-4 fw-normal" id="myName">Camila Nieto</h1>
-                </div>
-                <div class="textAnimation">
-                    <!--<p class="lead fw-normal">Full-Stack Developer & Software Engineer</p>-->
-                    <a href="#" class="fw-normal typewrite" data-period="2000" data-type='[ "Hi, welcome!", "I am a Full-Stack Developer", "and a Software Engineer.", "Please scroll down." ]'>
-                        <span class="wrap"></span>
-                    </a>
-                </div>
-                <!--<a class="btn btn-outline-secondary" href="#">CV</a>-->
-            </div>
-        </div>
+	<main>
+		<div transition-style="in:circle:hesitate" class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark"
+			id="mainDiv">
+			<div class="col-10 col-sm-10 col-md-9 col-lg-7 col-xl-7 mx-auto" id="centerDiv">
+				<div class="textAnimation">
+					<h1 class="display-4 fw-normal" id="myName">Camila Nieto</h1>
+				</div>
+				<div class="textAnimation">
+					<!--<p class="lead fw-normal">Full-Stack Developer & Software Engineer</p>-->
+					<a href="#" class="fw-normal typewrite" data-period="2000"
+						data-type='[ "Hi, welcome!", "I am a Full-Stack Developer", "and a Software Engineer.", "Please scroll down." ]'>
+						<span class="wrap"></span>
+					</a>
+				</div>
+				<!--<a class="btn btn-outline-secondary" href="#">CV</a>-->
+			</div>
+		</div>
 
-        <span id="aboutMe"></span>
+		<span id="aboutMe"></span>
 
-        <div class="section container text-center">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <h2 class="title">About me</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
-                    <div class="videoContainer">
-                        <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xsxh7I-kr1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-8 content">
-                    <p class="subContent">
-                        My name is Camila Nieto. Doing web pages that reach perfection is my goal. 
-                        I love to create astonishing websites that make the user comfortable with their appearance and functionality. 
-                        I live in Colombia, in a small city called Zipaquirá. I am bilingual (fluent in Spanish and English languages). 
-                    </p>
-                    <p class="subContent">
-                        I am a graduate of Centennial College (Toronto, Canada) in the program of Software Engineering Technician. 
-                        I completed the Professional Certificate in Computer Science for Web Programming at Harvard University, Massachusetts.
-                        Recently, I finished the professional certificate in coding: Full Stack Development with MERN at MIT University (Massachusetts Institute of Technology).
-                    </p>
-                    <p class="subContent">
-                        Additionally, I hope to be a Full Stack developer one day. 
-                        Desire to learn new things, constance, discipline and perseverance are the words that define me.
-                    </p>
-                    <h4 class="subtitle">Find me:</h4>
-                    <ul class="subContent LinksList">
-                        <li><strong>GitHub username: </strong>CamilaNieto-Centennial</li>
-                        <li><a href="https://www.linkedin.com/in/camila-andrea-nieto-moya-954196227/" target="_blank">My LinkedIn Account</a></li>
-                        <li><a href="#contactMe">Best way to contact me</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-4 content">
-                    <div class="imageContainer">
-                        <img class="roundImage" src="./images/MyImage.jpeg" alt="Camila Nieto">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="quoteContainer position-relative overflow-hidden p-5 p-md-5 text-center">
-            <div class="col-md-7 p-lg-5 mx-auto my-4">
-                <h3 class="quoteContent display-4 fw-normal"><q>Live the life, accept the challenge. Do not lose
-                        the laugh, keep on feeling. Keep your guard and live your dreams</q></h3>
-                <p class="quoteAuthor lead fw-normal">~ Carpe Diem</p>
-                <!--<a class="btn btn-outline-secondary" href="#">Coming soon</a>-->
-            </div>
-        </div>
-
-
-
-        <span id="technologies"></span>
-
-        <div class="section container text-center">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <h2 class="title">Technologies</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
-                    <!--.container-->
-                    <p class="subContent">
-                        I began my journey as a programmer at the age of 16. 
-                        Since then, I have learned and implemented different technologies that are listed below.
-                    </p>
-                    <h4 class="subtitle">Programming, Markup, and Styling Languages</h4>
-                    <div class="gridContainerPrimary">
-                        <div class="gridOne">
-                            <!--5-->
-                            <!--.product-grid-->
-                            <div class="languages stacked" id="l1">
-                                <!--.card-->
-                                <img src="./images/C.png" alt="C" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">C</h5>
-                                    <!--Inside of .gridRectangle is .gridTitle-->
-                                </div>
-                            </div>
-                            <div class="languages stacked" id="l2">
-                                <img src="./images/Python.png" alt="Python" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Python</h5>
-                                </div>
-                            </div>
-                            <div class="languages stacked" id="l3">
-                                <img src="./images/html-css-javascript.png" alt="HTML, CSS, JavaScript"
-                                    class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">HTML, CSS, JavaScript</h5>
-                                </div>
-                            </div>
-                            <div class="languages stacked" id="l4">
-                                <img src="./images/C_Sharp.png" alt="C#" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">C#</h5>
-                                </div>
-                            </div>
-                            <div class="languages stacked" id="l5">
-                                <img src="./images/Java.png" alt="Java" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Java</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <h4 class="subtitle">Databases</h4>
-                    <div class="gridContainerSecondary">
-                        <div class="gridTwo">
-                            <!--4-->
-                            <div class="dbs stacked" id="d1">
-                                <img src="./images/PostgreSQL3.png" alt="C" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">PostgreSQL</h5>
-                                </div>
-                            </div>
-                            <div class="dbs stacked" id="d2">
-                                <img src="./images/MySQL.png" alt="C" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">MySQL</h5>
-                                </div>
-                            </div>
-                            <div class="dbs stacked" id="d3">
-                                <img src="./images/MongoDB.png" alt="C" class="gridImages">
-                                <!--style="width: 180px;"-->
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">MongoDB</h5>
-                                </div>
-                            </div>
-                            <div class="dbs stacked" id="d4">
-                                <img src="./images/ORACLE.png" alt="C" class="gridImages">
-                                <!--style="width: 180px;"-->
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">ORACLE</h5>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <h4 class="subtitle">Frameworks</h4>
-                    <div class="gridContainerPrimary">
-                        <div class="gridThree">
-                            <!--4-->
-                            <div class="frameworks stacked" id="f1">
-                                <img src="./images/Django.png" alt="Django" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Django</h5>
-                                </div>
-                            </div>
-                            <div class="frameworks stacked" id="f2">
-                                <img src="./images/Flask.png" alt="Flask" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Flask</h5>
-                                </div>
-                            </div>
-                            <div class="frameworks stacked" id="f3">
-                                <img src="./images/React.png" alt="React" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">React</h5>
-                                </div>
-                            </div>
-                            <div class="frameworks stacked" id="f4">
-                                <img src="./images/Angular.png" alt="Angular" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Angular</h5>
-                                </div>
-                            </div>
-                            <div class="frameworks stacked" id="f5">
-                                <img src="./images/Express.png" alt="Express.js" class="gridImages">
-                                <div class="gridRectangle">
-                                    <h5 class="gridTitle">Express.js</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="section container text-center">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<h2 class="title">About me</h2>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
+					<div class="videoContainer">
+						<div class="ratio ratio-16x9">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/xsxh7I-kr1E"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-8 content">
+					<p class="subContent">
+						My name is Camila Nieto. Doing web pages that reach perfection is my goal.
+						I love to create astonishing websites that make the user comfortable with their appearance and
+						functionality.
+						I live in Colombia, in a small city called Zipaquirá. I am bilingual (fluent in Spanish and
+						English languages).
+					</p>
+					<p class="subContent">
+						I am a graduate of Centennial College (Toronto, Canada) in the program of Software Engineering
+						Technician.
+						I completed the Professional Certificate in Computer Science for Web Programming at Harvard
+						University, Massachusetts.
+						Additionally, I finished the professional certificate in coding: Full Stack Development with MERN at
+						MIT University (Massachusetts Institute of Technology).
+					</p>
+					<p class="subContent">
+						Finally, I hope to be a Full Stack developer one day.
+						Desire to learn new things, constance, discipline and perseverance are the words that define me.
+					</p>
+					<h4 class="subtitle">Find me:</h4>
+					<ul class="subContent LinksList">
+						<li><strong>GitHub username: </strong>CamilaNieto-Centennial</li>
+						<li><a href="https://www.linkedin.com/in/camila-andrea-nieto-moya-954196227/" target="_blank">My
+								LinkedIn Account</a></li>
+						<li><a href="#contactMe">Best way to contact me</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-4 content">
+					<div class="imageContainer">
+						<img class="roundImage" src="./images/MyImage.jpeg" alt="Camila Nieto">
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
-        <span id="projects"></span>
-
-        <div class="section container text-center">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <h2 class="title">Projects</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
-                    <p class="subContent">
-                        Here are some projects that I made along the way. Any of these projects are official websites...
-                        Please check them out!
-                    </p>
-                </div>
-                <div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="./images/ANIMAL-RESCUE.gif" class="card-img-top" alt="Animal Rescue" style="border-bottom: 1px solid black;">
-                                <div class="card-body">
-                                    <h5 class="card-title">ANIMAL RESCUE</h5>
-                                    <p class="card-text">A responsive webpage for adoption shelters. This website uses HTML, CSS, JavaScript, Bootstrap, Python (Flask), and PostgreSQL. </p>
-                                    <a href="https://github.com/CamilaNieto-Centennial/ANIMAL-RESCUE" target="_blank">
-                                        <button id="button" class="btn btn-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                            </svg>
-                                            <strong>GitHub</strong>
-                                        </button>
-                                    </a>
-                                    <a href="https://animal-rescue-04.up.railway.app/login" target="_blank">
-                                        <button id="button" class="btn btn-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wordpress" viewBox="0 0 16 16">
-                                                <path d="M12.633 7.653c0-.848-.305-1.435-.566-1.892l-.08-.13c-.317-.51-.594-.958-.594-1.48 0-.63.478-1.218 1.152-1.218.02 0 .039.002.058.003l.031.003A6.838 6.838 0 0 0 8 1.137 6.855 6.855 0 0 0 2.266 4.23c.16.005.313.009.442.009.717 0 1.828-.087 1.828-.087.37-.022.414.521.044.565 0 0-.371.044-.785.065l2.5 7.434 1.5-4.506-1.07-2.929c-.369-.022-.719-.065-.719-.065-.37-.022-.326-.588.043-.566 0 0 1.134.087 1.808.087.718 0 1.83-.087 1.83-.087.37-.022.413.522.043.566 0 0-.372.043-.785.065l2.48 7.377.684-2.287.054-.173c.27-.86.469-1.495.469-2.046zM1.137 8a6.864 6.864 0 0 0 3.868 6.176L1.73 5.206A6.837 6.837 0 0 0 1.137 8z"/>
-                                                <path d="M6.061 14.583 8.121 8.6l2.109 5.78c.014.033.03.064.049.094a6.854 6.854 0 0 1-4.218.109zm7.96-9.876c.03.219.047.453.047.706 0 .696-.13 1.479-.522 2.458l-2.096 6.06a6.86 6.86 0 0 0 2.572-9.224z"/>
-                                                <path fill-rule="evenodd" d="M0 8c0-4.411 3.589-8 8-8 4.41 0 8 3.589 8 8s-3.59 8-8 8c-4.411 0-8-3.589-8-8zm.367 0c0 4.209 3.424 7.633 7.633 7.633 4.208 0 7.632-3.424 7.632-7.633C15.632 3.79 12.208.367 8 .367 3.79.367.367 3.79.367 8z"/>
-                                            </svg>
-                                            <strong>Clients Website</strong>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./images/Tranzzacto.png" class="card-img-top" alt="Bad Bank">
-                                <div class="card-body">
-                                    <h5 class="card-title">TRANZZACTO</h5>
-                                    <p class="card-text">A responsive webpage that represents a Full Stack banking application. This webpage uses Next.js, React.js, Mantine UI, MongoDB, Node.js, Express.js, and Firebase Authentication.</p>
-                                    <a href="https://github.com/CamilaNieto-Centennial/Full-Stack-Banking-App" target="_blank">
-                                        <button id="button" class="btn btn-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                            </svg>
-                                            <strong>GitHub</strong>
-                                        </button>
-                                    </a>
-                                    <a href="https://camila-nietofullstackbankingapplication.vercel.app/" target="_blank">
-                                        <button id="button" class="btn btn-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wordpress" viewBox="0 0 16 16">
-                                                <path d="M12.633 7.653c0-.848-.305-1.435-.566-1.892l-.08-.13c-.317-.51-.594-.958-.594-1.48 0-.63.478-1.218 1.152-1.218.02 0 .039.002.058.003l.031.003A6.838 6.838 0 0 0 8 1.137 6.855 6.855 0 0 0 2.266 4.23c.16.005.313.009.442.009.717 0 1.828-.087 1.828-.087.37-.022.414.521.044.565 0 0-.371.044-.785.065l2.5 7.434 1.5-4.506-1.07-2.929c-.369-.022-.719-.065-.719-.065-.37-.022-.326-.588.043-.566 0 0 1.134.087 1.808.087.718 0 1.83-.087 1.83-.087.37-.022.413.522.043.566 0 0-.372.043-.785.065l2.48 7.377.684-2.287.054-.173c.27-.86.469-1.495.469-2.046zM1.137 8a6.864 6.864 0 0 0 3.868 6.176L1.73 5.206A6.837 6.837 0 0 0 1.137 8z"/>
-                                                <path d="M6.061 14.583 8.121 8.6l2.109 5.78c.014.033.03.064.049.094a6.854 6.854 0 0 1-4.218.109zm7.96-9.876c.03.219.047.453.047.706 0 .696-.13 1.479-.522 2.458l-2.096 6.06a6.86 6.86 0 0 0 2.572-9.224z"/>
-                                                <path fill-rule="evenodd" d="M0 8c0-4.411 3.589-8 8-8 4.41 0 8 3.589 8 8s-3.59 8-8 8c-4.411 0-8-3.589-8-8zm.367 0c0 4.209 3.424 7.633 7.633 7.633 4.208 0 7.632-3.424 7.632-7.633C15.632 3.79 12.208.367 8 .367 3.79.367.367 3.79.367 8z"/>
-                                            </svg>
-                                            <strong>Website</strong>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./images/LANDHOP.gif" class="card-img-top" alt="LandHop">
-                                <div class="card-body">
-                                    <h5 class="card-title">LANDHOP</h5>
-                                    <p class="card-text">A responsive webpage perfect for tourists and travelers. This website uses HTML, CSS, JavaScript, Bootstrap, Python (Django), and SQLite.</p>
-                                    <a href="https://github.com/CamilaNieto-Centennial/landhop" target="_blank">
-                                        <button id="button" class="btn btn-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                            </svg>
-                                            <strong>GitHub</strong>
-                                        </button>
-                                    </a>
-                                    <a href="https://landhop.up.railway.app/" target="_blank">
-                                        <button id="button" class="btn btn-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wordpress" viewBox="0 0 16 16">
-                                                <path d="M12.633 7.653c0-.848-.305-1.435-.566-1.892l-.08-.13c-.317-.51-.594-.958-.594-1.48 0-.63.478-1.218 1.152-1.218.02 0 .039.002.058.003l.031.003A6.838 6.838 0 0 0 8 1.137 6.855 6.855 0 0 0 2.266 4.23c.16.005.313.009.442.009.717 0 1.828-.087 1.828-.087.37-.022.414.521.044.565 0 0-.371.044-.785.065l2.5 7.434 1.5-4.506-1.07-2.929c-.369-.022-.719-.065-.719-.065-.37-.022-.326-.588.043-.566 0 0 1.134.087 1.808.087.718 0 1.83-.087 1.83-.087.37-.022.413.522.043.566 0 0-.372.043-.785.065l2.48 7.377.684-2.287.054-.173c.27-.86.469-1.495.469-2.046zM1.137 8a6.864 6.864 0 0 0 3.868 6.176L1.73 5.206A6.837 6.837 0 0 0 1.137 8z"/>
-                                                <path d="M6.061 14.583 8.121 8.6l2.109 5.78c.014.033.03.064.049.094a6.854 6.854 0 0 1-4.218.109zm7.96-9.876c.03.219.047.453.047.706 0 .696-.13 1.479-.522 2.458l-2.096 6.06a6.86 6.86 0 0 0 2.572-9.224z"/>
-                                                <path fill-rule="evenodd" d="M0 8c0-4.411 3.589-8 8-8 4.41 0 8 3.589 8 8s-3.59 8-8 8c-4.411 0-8-3.589-8-8zm.367 0c0 4.209 3.424 7.633 7.633 7.633 4.208 0 7.632-3.424 7.632-7.633C15.632 3.79 12.208.367 8 .367 3.79.367.367 3.79.367 8z"/>
-                                            </svg>
-                                            <strong>Website</strong>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="quoteContainer position-relative overflow-hidden p-5 p-md-5 text-center">
+			<div class="col-md-7 p-lg-5 mx-auto my-4">
+				<h3 class="quoteContent display-4 fw-normal"><q>Live the life, accept the challenge. Do not lose
+						the laugh, keep on feeling. Keep your guard and live your dreams</q></h3>
+				<p class="quoteAuthor lead fw-normal">~ Carpe Diem</p>
+				<!--<a class="btn btn-outline-secondary" href="#">Coming soon</a>-->
+			</div>
+		</div>
 
 
-        <span id="contactMe"></span>
-    </main>
 
-    <footer>
-        <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark">
-            <div class="col-11 col-sm-10 col-md-9 col-lg-9 mx-auto my-5">
-                <h1 class="display-4 fw-normal" id="myName">Contact Me</h1>
-                <div class="social">
-                    <a href="https://github.com/CamilaNieto-Centennial" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/camila-andrea-nieto-moya-954196227/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://www.instagram.com/camilanieto4444/" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a href="https://facebook.com/camila.nieto.3192" target="_blank"><i class="bi bi-facebook"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+		<span id="technologies"></span>
 
-    <script>
-        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-        window.onscroll = function () { scrollFunction() };
+		<div class="section container text-center">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<h2 class="title">Technologies</h2>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
+					<!--.container-->
+					<p class="subContent">
+						I began my journey as a programmer at the age of 16.
+						Since then, I have learned and implemented different technologies that are listed below.
+					</p>
+					<h4 class="subtitle">Programming, Markup, and Styling Languages</h4>
+					<div class="gridContainerPrimary">
+						<div class="gridOne">
+							<!--5-->
+							<!--.product-grid-->
+							<div class="languages stacked" id="l1">
+								<!--.card-->
+								<img src="./images/C.png" alt="C" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">C</h5>
+									<!--Inside of .gridRectangle is .gridTitle-->
+								</div>
+							</div>
+							<div class="languages stacked" id="l2">
+								<img src="./images/Python.png" alt="Python" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Python</h5>
+								</div>
+							</div>
+							<div class="languages stacked" id="l3">
+								<img src="./images/html-css-javascript.png" alt="HTML, CSS, JavaScript" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">HTML, CSS, JavaScript</h5>
+								</div>
+							</div>
+							<div class="languages stacked" id="l4">
+								<img src="./images/C_Sharp.png" alt="C#" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">C#</h5>
+								</div>
+							</div>
+							<div class="languages stacked" id="l5">
+								<img src="./images/Java.png" alt="Java" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Java</h5>
+								</div>
+							</div>
+						</div>
+					</div>
 
-        function scrollFunction() {
-            let mainDiv = document.getElementById('mainDiv');
-            let navbar = document.getElementById('navbar');
 
-            let heightMain = mainDiv.offsetHeight;
-            console.log("Height of mainDiv: " + heightMain)
-            if (window.innerWidth > 769) {
-                if (document.body.scrollTop > heightMain || document.documentElement.scrollTop > heightMain) {
-                    navbar.style.top = "0";
-                } else {
-                    navbar.style.top = "-90px";
-                }
-            }
-        }
-    </script>
+					<h4 class="subtitle">Databases</h4>
+					<div class="gridContainerSecondary">
+						<div class="gridTwo">
+							<!--4-->
+							<div class="dbs stacked" id="d1">
+								<img src="./images/PostgreSQL3.png" alt="C" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">PostgreSQL</h5>
+								</div>
+							</div>
+							<div class="dbs stacked" id="d2">
+								<img src="./images/MySQL.png" alt="C" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">MySQL</h5>
+								</div>
+							</div>
+							<div class="dbs stacked" id="d3">
+								<img src="./images/MongoDB.png" alt="C" class="gridImages">
+								<!--style="width: 180px;"-->
+								<div class="gridRectangle">
+									<h5 class="gridTitle">MongoDB</h5>
+								</div>
+							</div>
+							<div class="dbs stacked" id="d4">
+								<img src="./images/ORACLE.png" alt="C" class="gridImages">
+								<!--style="width: 180px;"-->
+								<div class="gridRectangle">
+									<h5 class="gridTitle">ORACLE</h5>
+								</div>
+							</div>
 
-    <script src="index.js" async></script>
+						</div>
+					</div>
 
-    <!--jQuery CDN-->
-    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+					<h4 class="subtitle">Frameworks</h4>
+					<div class="gridContainerPrimary">
+						<div class="gridThree">
+							<!--4-->
+							<div class="frameworks stacked" id="f1">
+								<img src="./images/Django.png" alt="Django" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Django</h5>
+								</div>
+							</div>
+							<div class="frameworks stacked" id="f2">
+								<img src="./images/Flask.png" alt="Flask" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Flask</h5>
+								</div>
+							</div>
+							<div class="frameworks stacked" id="f3">
+								<img src="./images/React.png" alt="React" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">React</h5>
+								</div>
+							</div>
+							<div class="frameworks stacked" id="f4">
+								<img src="./images/Angular.png" alt="Angular" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Angular</h5>
+								</div>
+							</div>
+							<div class="frameworks stacked" id="f5">
+								<img src="./images/Express.png" alt="Express.js" class="gridImages">
+								<div class="gridRectangle">
+									<h5 class="gridTitle">Express.js</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<span id="projects"></span>
+
+		<div class="section container text-center">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<h2 class="title">Projects</h2>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
+					<p class="subContent">
+						Here are some projects that I made along the way. Any of these projects are official websites...
+						Please check them out!
+					</p>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-xs-12 col-lg-12 content">
+					<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+						<div class="col">
+							<div class="card">
+								<img src="./images/ANIMAL-RESCUE.gif" class="card-img-top" alt="Animal Rescue"
+									style="border-bottom: 1px solid black;">
+								<div class="card-body">
+									<h5 class="card-title">ANIMAL RESCUE</h5>
+									<p class="card-text">A responsive webpage for adoption shelters. This website uses
+										HTML, CSS, JavaScript, Bootstrap, Python (Flask), and PostgreSQL. </p>
+									<div class="d-flex flex-row gap-1 flex-wrap justify-content-center">
+										<a href="https://github.com/CamilaNieto-Centennial/ANIMAL-RESCUE" target="_blank">
+											<button id="button" class="btn btn-secondary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-github" viewBox="0 0 16 16">
+													<path
+														d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+												</svg>
+												<strong>GitHub</strong>
+											</button>
+										</a>
+										<a href="https://animal-rescue-04.up.railway.app/login" target="_blank">
+											<button id="button" class="btn btn-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-browser-chrome" viewBox="0 0 16 16">
+													<path fill-rule="evenodd"
+														d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+												</svg>
+												<strong>Clients Website</strong>
+											</button>
+										</a>
+										<a href="https://animal-rescue-04.up.railway.app/staff/login" target="_blank">
+											<button id="button" class="btn btn-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-browser-chrome" viewBox="0 0 16 16">
+													<path fill-rule="evenodd"
+														d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+												</svg>
+												<strong>Staff Website</strong>
+											</button>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<img src="./images/Tranzzacto.png" class="card-img-top" alt="Bad Bank">
+								<div class="card-body">
+									<h5 class="card-title">TRANZZACTO</h5>
+									<p class="card-text">A responsive webpage that represents a Full Stack banking
+										application. This webpage uses Next.js, React.js, Mantine UI, MongoDB, Node.js,
+										Express.js, and Firebase Authentication.</p>
+									<div class="d-flex flex-row gap-1 flex-wrap justify-content-center">
+										<a href="https://github.com/CamilaNieto-Centennial/Full-Stack-Banking-App" target="_blank">
+											<button id="button" class="btn btn-secondary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-github" viewBox="0 0 16 16">
+													<path
+														d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+												</svg>
+												<strong>GitHub</strong>
+											</button>
+										</a>
+										<a href="https://camila-nietofullstackbankingapplication.vercel.app/" target="_blank">
+											<button id="button" class="btn btn-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-browser-chrome" viewBox="0 0 16 16">
+													<path fill-rule="evenodd"
+														d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+												</svg>
+												<strong>Website</strong>
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<img src="./images/LANDHOP.gif" class="card-img-top" alt="LandHop">
+								<div class="card-body">
+									<h5 class="card-title">LANDHOP</h5>
+									<p class="card-text">A responsive webpage perfect for tourists and travelers. This
+										website uses HTML, CSS, JavaScript, Bootstrap, Python (Django), and SQLite.</p>
+									<div class="d-flex flex-row gap-1 flex-wrap justify-content-center">
+										<a href="https://github.com/CamilaNieto-Centennial/landhop" target="_blank">
+											<button id="button" class="btn btn-secondary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-github" viewBox="0 0 16 16">
+													<path
+														d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+												</svg>
+												<strong>GitHub</strong>
+											</button>
+										</a>
+										<a href="https://landhop.up.railway.app/" target="_blank">
+											<button id="button" class="btn btn-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+													class="bi bi-browser-chrome" viewBox="0 0 16 16">
+													<path fill-rule="evenodd"
+														d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+												</svg>
+												<strong>Website</strong>
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<span id="contactMe"></span>
+	</main>
+
+	<footer>
+		<div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark">
+			<div class="col-11 col-sm-10 col-md-9 col-lg-9 mx-auto my-5">
+				<h1 class="display-4 fw-normal" id="myName">Contact Me</h1>
+				<div class="social">
+					<a href="https://github.com/CamilaNieto-Centennial" target="_blank"><i class="bi bi-github"></i></a>
+					<a href="https://www.linkedin.com/in/camila-andrea-nieto-moya-954196227/" target="_blank"><i
+							class="bi bi-linkedin"></i></a>
+					<a href="https://www.instagram.com/camilanieto4444/" target="_blank"><i class="bi bi-instagram"></i></a>
+					<a href="https://facebook.com/camila.nieto.3192" target="_blank"><i class="bi bi-facebook"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			let mainDiv = document.getElementById('mainDiv');
+			let navbar = document.getElementById('navbar');
+
+			let heightMain = mainDiv.offsetHeight;
+			console.log("Height of mainDiv: " + heightMain)
+			if (window.innerWidth > 769) {
+				if (document.body.scrollTop > heightMain || document.documentElement.scrollTop > heightMain) {
+					navbar.style.top = "0";
+				} else {
+					navbar.style.top = "-90px";
+				}
+			}
+		}
+	</script>
+
+	<script src="index.js" async></script>
+
+	<!--jQuery CDN-->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
